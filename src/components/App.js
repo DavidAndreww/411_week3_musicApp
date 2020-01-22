@@ -1,9 +1,14 @@
 import React from 'react';
 
 class App extends React.Component {
+  state = {
+    loggedIn: false,
+    online: false,
+    notifications: ''
+  }
   render () {
     return (
-      <div>what it do</div>
+      <div>music app</div>
     )
   }
 }
