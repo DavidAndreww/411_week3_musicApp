@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const NavBar = () => {
+const NavBar = ({ onLoginChange }) => {
   const classes = useStyles();
 
   return (
@@ -32,7 +32,7 @@ const NavBar = () => {
           <Typography variant="h6" className={classes.title}>
             Fresh Beatz
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button onClick={() => onLoginChange()} color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
