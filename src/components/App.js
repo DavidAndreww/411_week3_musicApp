@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './NavBar'
 
 class App extends React.Component {
   state = {
@@ -8,7 +9,7 @@ class App extends React.Component {
   }
   render () {
     return (
-      <div>music app</div>
+      <NavBar />
     )
   }
 }
