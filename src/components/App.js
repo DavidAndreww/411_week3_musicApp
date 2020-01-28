@@ -13,10 +13,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <NavBar onLoginChange={this.onLoginChange} loggedInState={this.state.loggedIn}/>
         {this.state.loggedIn ? <p>Dashboard</p> : <LoginPage />}
       </div>
+      
     );
   }
 }
