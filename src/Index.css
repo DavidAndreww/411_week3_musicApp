@@ -3,10 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-.main {
-  text-align: center;
-}
 .login-page {
+  text-align: center;
   margin-top: 3em;
 }
 .login-page button {
