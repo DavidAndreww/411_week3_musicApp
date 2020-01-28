@@ -4,11 +4,11 @@ import { Button } from '@material-ui/core';
 const LoginPage = () => {
 
   return (
-    <form>
-      <label>Username:</label>
-      <input name="userName" />
-      <label>Password:</label>
-      <input name="password" />
+    <form className="login-page">
+      <label>Username:</label><br />
+      <input name="userName" /><br />
+      <label>Password:</label><br />
+      <input name="password" /><br />
       <Button color="primary" variant="contained">Login</Button>
     </form>
   )
