@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const LoginPage = () => {
+const LoginPage = ( { onLoginChange } ) => {
   return (
       <form className="login-page">
       <label>Username:</label>
@@ -12,7 +12,7 @@ const LoginPage = () => {
       <br />
       <input name="password" />
       <br />
-      <Button color="primary" variant="contained">
+      <Button color="primary" variant="contained" onClick={() => onLoginChange()}>
         Login
       </Button>
     </form>

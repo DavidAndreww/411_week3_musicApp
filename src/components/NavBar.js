@@ -32,7 +32,7 @@ const NavBar = ({ onLoginChange, loggedInState }) => {
           <Typography variant="h6" className={classes.title}>
             Fresh Beatz
           </Typography>
-          <Button onClick={() => onLoginChange()} color="inherit">{ loggedInState ? 'Logout' : 'Login' }</Button>
+          <Button onClick={() => onLoginChange()} color="inherit">{ loggedInState ? 'Logout' : '' }</Button>
         </Toolbar>
       </AppBar>
     </div>

@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div className="main">
         <NavBar onLoginChange={this.onLoginChange} loggedInState={this.state.loggedIn}/>
-        {this.state.loggedIn ? <p>Dashboard</p> : <LoginPage />}
+        {this.state.loggedIn ? <p>Dashboard</p> : <LoginPage onLoginChange={this.onLoginChange}/>}
       </div>
       
     );
