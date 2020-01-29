@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CardContent = () => {
+const CardContent = ({title, content}) => {
 
   return (
     <div className="card-content">
-      <h2>Title</h2>
-      <p>What this card does</p>
+      <h2>{title}</h2>
+      <p>{content}</p>
     </div>
   )
 }
