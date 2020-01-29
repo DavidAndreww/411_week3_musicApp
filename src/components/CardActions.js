@@ -10,7 +10,7 @@ const CardActions = ({ type, handler }) => {
     case "slider":
        return <CardSlider />;
     case "select":
-      return <CardSelect />;
+      return <CardSelect handler={handler}/>;
     default:
       return null;
   }

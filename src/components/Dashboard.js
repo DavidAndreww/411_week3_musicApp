@@ -18,6 +18,14 @@ class Dashboard extends React.Component {
     }
   }
 
+  handleSoundQualityChange = (e) => {
+    let quality = e.target.value;
+    if(quality === 'low'){
+      let notifications = this.state.notifications
+      this.setState({ notifications: [...notifications, 'Sound quality has been degraded.'] })
+    }
+  }
+
   render() {
     const onlineCardTitle = "Online Mode";
     const onlineCardContent = "Is this application connected to the internet?";
@@ -47,6 +55,7 @@ class Dashboard extends React.Component {
             title={soundCardTitle}
             content={soundCardContent}
             type="select"
+            handler={this.handleSoundQualityChange}
           />
         </div>
         <Notifications alerts={this.state.notifications}/>

@@ -4,11 +4,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel'
 
-const CardSelect = () => {
+const CardSelect = ({ handler }) => {
   return (
     <FormControl className="select">
         <InputLabel id="demo-simple-select-label">Quality</InputLabel>
-        <Select value=''>
+        <Select id="soundQuality" onChange={handler}>
           <MenuItem value='low'>Low</MenuItem>
           <MenuItem value='normal'>Normal</MenuItem>
           <MenuItem value='high'>High</MenuItem>
