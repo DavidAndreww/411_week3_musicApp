@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import CardSwitch from "./CardSwitch";
-import CardSlider from './CardSlider';
 
 class Dashboard extends React.Component {
   render() {
@@ -17,8 +15,8 @@ class Dashboard extends React.Component {
       "Manually control the music quality in event of poor connection.";
     return (
       <div className="dashboard">
-        <Card title={onlineCardTitle} content={onlineCardContent} action={<CardSwitch />}/>
-        <Card title={volumeCardTitle} content={volumeCardContent} action={<CardSlider />}/>
+        <Card title={onlineCardTitle} content={onlineCardContent} type='switch'/>
+        <Card title={volumeCardTitle} content={volumeCardContent} type='slider'/>
         <Card title={soundCardTitle} content={soundCardContent} />
       </div>
     );
