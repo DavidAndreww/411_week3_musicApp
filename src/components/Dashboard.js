@@ -1,21 +1,24 @@
 import React from "react";
 import Card from "./Card";
-import CardSwitch from './CardSwitch'
+import CardSwitch from "./CardSwitch";
 
 class Dashboard extends React.Component {
-  
   render() {
-    const onlineCardTitle = "Online Mode"
-    const onlineCardContent = "Is this application connected to the internet?"
-    const volumeCardTitle = 'Master Volume'
-    const volumeCardContent = "Overrides all other settings in this application"
-    const soundCardTitle = 'Sound Quality'
-    const soundCardContent = 'Manually control the music quality in event of poor connection'
+    const onlineCardTitle = "Online Mode";
+    const onlineCardContent = "Is this application connected to the internet?";
+
+    const volumeCardTitle = "Master Volume";
+    const volumeCardContent =
+      "Overrides all other settings in this application";
+
+    const soundCardTitle = "Sound Quality";
+    const soundCardContent =
+      "Manually control the music quality in event of poor connection";
     return (
       <div className="dashboard">
-        <Card title={onlineCardTitle} content={onlineCardContent}/>
-        <Card title={volumeCardTitle} content={volumeCardContent}/>
-        <Card title={soundCardTitle} content={soundCardContent}/>
+        <Card title={onlineCardTitle} content={onlineCardContent} />
+        <Card title={volumeCardTitle} content={volumeCardContent} />
+        <Card title={soundCardTitle} content={soundCardContent} />
       </div>
     );
   }

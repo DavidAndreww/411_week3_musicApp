@@ -4,6 +4,7 @@ import CardContent from "./CardContent";
 import CardActions from "./CardActions";
 
 const Card = ({title, content}) => {
+  
   return (
     <Paper className="card" elevation={3}>
       <CardContent title={title} content={content}/>
