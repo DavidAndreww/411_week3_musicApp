@@ -20,6 +20,10 @@
 .dashboard .notifications{
   margin-left: .75em;
 }
+.dashboard .notifications li {
+  list-style: none;
+  margin-left: 1em;
+}
 .card {
   display: flex;
   flex-direction: column;

@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
             type="select"
           />
         </div>
-        <Notifications />
+        <Notifications alerts={this.state.notifications}/>
       </div>
     );
   }

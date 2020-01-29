@@ -8,7 +8,7 @@ const CardSelect = () => {
   return (
     <FormControl className="select">
         <InputLabel id="demo-simple-select-label">Quality</InputLabel>
-        <Select>
+        <Select value=''>
           <MenuItem value='low'>Low</MenuItem>
           <MenuItem value='normal'>Normal</MenuItem>
           <MenuItem value='high'>High</MenuItem>
