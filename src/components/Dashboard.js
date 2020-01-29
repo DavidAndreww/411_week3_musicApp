@@ -7,24 +7,25 @@ class Dashboard extends React.Component {
     isOnline: true,
     notifications: [],
     volumeLevel: 30,
-    soundQuality: 'normal'
-  }
+    soundQuality: "normal"
+  };
 
-  handleOnlineChange = () =>{
-    this.setState({ isOnline: !this.state.isOnline })
-    if(this.state.isOnline === false){
-      let notifications = this.state.notifications
-      this.setState({ notifications: [...notifications, 'Your application is offline.'] })
+  handleOnlineChange = () => {
+    this.setState({ isOnline: !this.state.isOnline });
+    if (this.state.isOnline === false) {
+      let notifications = this.state.notifications;
+      this.setState({
+        notifications: [...notifications, "Your application is offline."]
+      });
     }
-  }
+  };
 
-  handleSoundQualityChange = (e) => {
-    let quality = e.target.value;
-    if(quality === 'low'){
-      let notifications = this.state.notifications
-      this.setState({ notifications: [...notifications, 'Sound quality has been degraded.'] })
-    }
-  }
+  handleSoundQualityChange = (message) => {
+    let notifications = this.state.notifications;
+    this.setState({
+      notifications: [...notifications, message]
+    });
+  };
 
   render() {
     const onlineCardTitle = "Online Mode";
@@ -58,7 +59,7 @@ class Dashboard extends React.Component {
             handler={this.handleSoundQualityChange}
           />
         </div>
-        <Notifications alerts={this.state.notifications}/>
+        <Notifications alerts={this.state.notifications} />
       </div>
     );
   }
