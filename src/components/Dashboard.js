@@ -6,21 +6,9 @@ class Dashboard extends React.Component {
   state = {
     isOnline: true,
     notifications: [],
-    volumeLevel: 30,
-    soundQuality: "normal"
   };
 
-  handleOnlineChange = () => {
-    this.setState({ isOnline: !this.state.isOnline });
-    if (this.state.isOnline === false) {
-      let notifications = this.state.notifications;
-      this.setState({
-        notifications: [...notifications, "Your application is offline."]
-      });
-    }
-  };
-
-  handleSoundQualityChange = (message) => {
+  handleCardActionChange = (message) => {
     let notifications = this.state.notifications;
     this.setState({
       notifications: [...notifications, message]
@@ -45,7 +33,7 @@ class Dashboard extends React.Component {
             title={onlineCardTitle}
             content={onlineCardContent}
             type="switch"
-            handler={this.handleOnlineChange}
+            handler={this.handleCardActionChange}
           />
           <Card
             title={volumeCardTitle}
@@ -56,7 +44,7 @@ class Dashboard extends React.Component {
             title={soundCardTitle}
             content={soundCardContent}
             type="select"
-            handler={this.handleSoundQualityChange}
+            handler={this.handleCardActionChange}
           />
         </div>
         <Notifications alerts={this.state.notifications} />
