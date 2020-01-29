@@ -10,7 +10,20 @@
 .login-page button {
   margin-top: 1em;
 }
+.dashboard {
+  padding: 5em 10em 0em;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dashboard .notifications{
+  margin-left: .75em;
+}
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20em;
   height: 15em;
   padding: 1em;
@@ -18,11 +31,10 @@
 .card .card-content h2{
   margin-bottom: 1em;
 }
-.card .card-content p{
-  margin-bottom: 6em;
-}
-.dashboard {
-  padding: 10em 10em 0em 10em;
+.card-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.card .select {
+  width: 10em;
 }

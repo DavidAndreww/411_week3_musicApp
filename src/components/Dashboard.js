@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Notifications from "./Notifications";
 
 class Dashboard extends React.Component {
   render() {
@@ -12,12 +13,27 @@ class Dashboard extends React.Component {
 
     const soundCardTitle = "Sound Quality";
     const soundCardContent =
-      "Manually control the music quality in event of poor connection.";
+      "Manually control the music quality in the event of a poor connection.";
     return (
       <div className="dashboard">
-        <Card title={onlineCardTitle} content={onlineCardContent} type='switch'/>
-        <Card title={volumeCardTitle} content={volumeCardContent} type='slider'/>
-        <Card title={soundCardTitle} content={soundCardContent} />
+        <div className="card-container">
+          <Card
+            title={onlineCardTitle}
+            content={onlineCardContent}
+            type="switch"
+          />
+          <Card
+            title={volumeCardTitle}
+            content={volumeCardContent}
+            type="slider"
+          />
+          <Card
+            title={soundCardTitle}
+            content={soundCardContent}
+            type="select"
+          />
+        </div>
+        <Notifications />
       </div>
     );
   }

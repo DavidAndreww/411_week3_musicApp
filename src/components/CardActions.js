@@ -1,6 +1,7 @@
 import React from "react";
 import CardSwitch from './CardSwitch'
 import CardSlider from './CardSlider'
+import CardSelect from './CardSelect'
 
 const CardActions = ({ type }) => {
   switch (type) {
@@ -8,6 +9,8 @@ const CardActions = ({ type }) => {
       return <CardSwitch />;
     case "slider":
        return <CardSlider />;
+    case "select":
+      return <CardSelect />;
     default:
       return null;
   }
