@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const LoginPage = ( { onLoginChange } ) => {
+const LoginPage = ({ onLoginChange }) => {
   return (
       <form className="login-page" onSubmit={() => onLoginChange()}>
       <label>Username:</label>
