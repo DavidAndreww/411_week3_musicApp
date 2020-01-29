@@ -3,12 +3,12 @@ import Paper from "@material-ui/core/Paper";
 import CardContent from "./CardContent";
 import CardActions from "./CardActions";
 
-const Card = ({title, content}) => {
+const Card = ({title, content, action}) => {
   
   return (
     <Paper className="card" elevation={3}>
       <CardContent title={title} content={content}/>
-      <CardActions />
+      <CardActions action={action} />
     </Paper>
   );
 };

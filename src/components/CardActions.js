@@ -1,8 +1,10 @@
 import React from 'react'
 
-const CardActions = () => {
+const CardActions = ({ action }) => {
   return (
-    <div>Card Action Here</div>
+    <div>
+      {action}
+    </div>
   )
 }
 

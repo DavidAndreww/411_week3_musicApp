@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
       "Manually control the music quality in event of poor connection";
     return (
       <div className="dashboard">
-        <Card title={onlineCardTitle} content={onlineCardContent} />
+        <Card title={onlineCardTitle} content={onlineCardContent} action={<CardSwitch />}/>
         <Card title={volumeCardTitle} content={volumeCardContent} />
         <Card title={soundCardTitle} content={soundCardContent} />
       </div>
