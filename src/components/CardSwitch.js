@@ -1,9 +1,9 @@
 import React from "react";
 import Switch from "@material-ui/core/Switch";
 
-const CardSwitch = () => {
+const CardSwitch = ({ handler }) => {
   return (
-    <Switch color="primary" />
+    <Switch color="primary" onChange={() => handler()}/>
   );
 };
 

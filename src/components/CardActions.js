@@ -3,10 +3,10 @@ import CardSwitch from './CardSwitch'
 import CardSlider from './CardSlider'
 import CardSelect from './CardSelect'
 
-const CardActions = ({ type }) => {
+const CardActions = ({ type, handler }) => {
   switch (type) {
     case "switch":
-      return <CardSwitch />;
+      return <CardSwitch handler={handler} />;
     case "slider":
        return <CardSlider />;
     case "select":

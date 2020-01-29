@@ -3,6 +3,21 @@ import Card from "./Card";
 import Notifications from "./Notifications";
 
 class Dashboard extends React.Component {
+  state = {
+    isOnline: true,
+    notifications: [],
+    volumeLevel: 30,
+    soundQuality: 'normal'
+  }
+
+  handleOnlineChange = () =>{
+    this.setState({ isOnline: !this.state.isOnline })
+    if(this.state.isOnline === false){
+      let notifications = this.state.notifications
+      this.setState({ notifications: [...notifications, 'Your application is offline.'] })
+    }
+  }
+
   render() {
     const onlineCardTitle = "Online Mode";
     const onlineCardContent = "Is this application connected to the internet?";
@@ -21,6 +36,7 @@ class Dashboard extends React.Component {
             title={onlineCardTitle}
             content={onlineCardContent}
             type="switch"
+            handler={this.handleOnlineChange}
           />
           <Card
             title={volumeCardTitle}
