@@ -4,7 +4,6 @@ import Notifications from "./Notifications";
 
 class Dashboard extends React.Component {
   state = {
-    isOnline: true,
     notifications: [],
   };
 
