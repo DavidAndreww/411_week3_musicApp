@@ -5,8 +5,17 @@
 }
 .login-page {
   text-align: center;
-  margin-top: 3em;
+  margin-top: 10em;
 }
 .login-page button {
   margin-top: 1em;
+}
+.card {
+  width: 20em;
+  height: 15em;
+}
+.dashboard {
+  padding: 10em 10em 0em 10em;
+  display: flex;
+  justify-content: space-around;
 }
