@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 
 const LoginPage = ({ onLoginChange }) => {
   return (
-      <form className="login-page" onSubmit={() => onLoginChange()}>
+    <form className="login-page" onSubmit={() => onLoginChange()}>
       <label>Username:</label>
       <br />
       <input name="userName" />

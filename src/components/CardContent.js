@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const CardContent = ({title, content}) => {
-
+const CardContent = ({ title, content }) => {
   return (
     <div className="card-content">
       <h2>{title}</h2>
       <p>{content}</p>
     </div>
-  )
-}
+  );
+};
 
 export default CardContent;
