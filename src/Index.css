@@ -13,6 +13,10 @@
 .card {
   width: 20em;
   height: 15em;
+  padding: 1em;
+}
+.card .card-content h2{
+  margin-bottom: 1em;
 }
 .dashboard {
   padding: 10em 10em 0em 10em;
