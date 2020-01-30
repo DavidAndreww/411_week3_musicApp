@@ -1,16 +1,14 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 
 const LoginPage = ({ onLoginChange }) => {
   return (
     <form className="login-page" onSubmit={() => onLoginChange()}>
-      <label>Username:</label>
+      <TextField variant="outlined" label="Username:" />
       <br />
-      <input name="userName" />
       <br />
-      <label>Password:</label>
-      <br />
-      <input name="password" />
+      <TextField variant="outlined" label="Password" />
       <br />
       <Button color="primary" variant="contained" type="submit">
         Login

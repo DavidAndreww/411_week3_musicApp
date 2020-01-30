@@ -8,7 +8,7 @@ const CardSelect = ({ handler }) => {
   const handleSelectChange = e => {
     let quality = e.target.value;
     if (quality === "low") {
-      handler('Sound quality has been degraded.');
+      handler("Sound quality has been degraded.");
     }
   };
 
