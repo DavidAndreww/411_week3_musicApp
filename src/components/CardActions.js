@@ -8,7 +8,7 @@ const CardActions = ({ type, handler }) => {
     case "switch":
       return <CardSwitch handler={handler} />;
     case "slider":
-       return <CardSlider />;
+       return <CardSlider handler={handler}/>;
     case "select":
       return <CardSelect handler={handler}/>;
     default:

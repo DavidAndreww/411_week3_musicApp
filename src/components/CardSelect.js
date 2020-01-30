@@ -14,7 +14,7 @@ const CardSelect = ({ handler }) => {
 
   return (
     <FormControl className="select">
-      <InputLabel id="demo-simple-select-label">Quality</InputLabel>
+      <InputLabel>Quality</InputLabel>
       <Select id="soundQuality" onChange={handleSelectChange}>
         <MenuItem value="low">Low</MenuItem>
         <MenuItem value="normal">Normal</MenuItem>
