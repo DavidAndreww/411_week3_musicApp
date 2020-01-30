@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Notifications from "./Notifications";
 
 import CardSelect from "./CardSelect";
