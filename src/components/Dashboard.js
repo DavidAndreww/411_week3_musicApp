@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import Notifications from "./Notifications";
 
 import CardSelect from "./CardSelect";
@@ -24,9 +24,9 @@ class Dashboard extends React.Component {
   };
 
   handleOnlineChange = () => {
-    let isonline = !this.state.isOnline;
-    this.setState({ isOnline: isonline });
-    if (isonline === false) {
+    let isOnline = !this.state.isOnline;
+    this.setState({ isOnline });
+    if (isOnline === false) {
       this.handleCardActionChange("Your application is offline.");
     }
   };
