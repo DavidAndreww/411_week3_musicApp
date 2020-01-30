@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
             title={volumeCardTitle}
             content={volumeCardContent}
             type="slider"
-            handler={this.handleCardActionChange}
+            handler={this.handleCardActionChangeitit}
           />
           <Card
             title={soundCardTitle}
