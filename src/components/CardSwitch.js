@@ -7,9 +7,9 @@ class CardSwitch extends React.Component {
   };
 
   handleOnlineChange = () => {
-    let online = !this.state.isOnline;
-    this.setState({ isOnline: online });
-    if (online === false) {
+    let isonline = !this.state.isOnline;
+    this.setState({ isOnline: isonline });
+    if (isonline === false) {
       this.props.handler("Your application is offline.");
     }
   };

@@ -39,6 +39,6 @@
   display: flex;
   justify-content: space-between;
 }
-.card .select {
+.select {
   width: 10em;
 }
