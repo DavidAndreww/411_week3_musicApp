@@ -1,8 +1,10 @@
 import React from "react";
 import Notifications from "./Notifications";
 
+//custom component imports
 import CardSelect from "./CardSelect";
 
+//material UI Imports
 import Switch from "@material-ui/core/Switch";
 import Slider from "@material-ui/core/Slider";
 import CardActions from "@material-ui/core/CardActions";
@@ -15,14 +17,14 @@ class Dashboard extends React.Component {
     notifications: [],
     isOnline: true
   };
-
+  // handles updated notifications for each card action
   handleCardActionChange = message => {
     let notifications = this.state.notifications;
     this.setState({
       notifications: [...notifications, message]
     });
   };
-
+  // handles changes for switch component
   handleOnlineChange = () => {
     let isOnline = !this.state.isOnline;
     this.setState({ isOnline });
@@ -30,7 +32,7 @@ class Dashboard extends React.Component {
       this.handleCardActionChange("Your application is offline.");
     }
   };
-
+  //handles change for slider component
   handleSliderChange = value => {
     let volume = value.target.textContent;
     if (volume > 80) {
@@ -44,7 +46,7 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard">
         <div className="card-container">
-          <Card>
+          <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
                 Online Mode
@@ -61,7 +63,7 @@ class Dashboard extends React.Component {
               />
             </CardActions>
           </Card>
-          <Card>
+          <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
                 Master Volume
@@ -81,7 +83,7 @@ class Dashboard extends React.Component {
               />
             </CardActions>
           </Card>
-          <Card>
+          <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
                 Sound Quality
@@ -92,7 +94,7 @@ class Dashboard extends React.Component {
               </Typography>
             </CardContent>
             <CardActions>
-              <CardSelect handler={this.handleCardActionChange} />
+              <CardSelect handleCardActionChange={this.handleCardActionChange} />
             </CardActions>
           </Card>
         </div>

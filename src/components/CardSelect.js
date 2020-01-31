@@ -4,11 +4,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 
-const CardSelect = ({ handler }) => {
+const CardSelect = ({ handleCardActionChange }) => {
   const handleSelectChange = e => {
     let quality = e.target.value;
     if (quality === "low") {
-      handler("Sound quality has been degraded.");
+      handleCardActionChange("Sound quality has been degraded.");
     }
   };
 
