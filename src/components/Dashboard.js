@@ -73,8 +73,6 @@ class Dashboard extends React.Component {
             <CardActions>
               <Slider
                 defaultValue={30}
-                aria-labelledby="discrete-slider"
-                valueLabelDisplay="auto"
                 step={10}
                 marks
                 min={0}
