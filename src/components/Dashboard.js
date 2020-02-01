@@ -35,6 +35,7 @@ class Dashboard extends React.Component {
   //handles change for slider component
   handleSliderChange = value => {
     let volume = value.target.textContent;
+    console.log(value);
     if (volume > 80) {
       this.handleCardActionChange(
         "Listening to music at high volume could cause long-term hearing loss."
@@ -69,12 +70,14 @@ class Dashboard extends React.Component {
                 Master Volume
               </Typography>
               <Typography>
-                Overrides all other settings in this application.
+                Overrides all other volume settings in this application.
               </Typography>
             </CardContent>
             <CardActions>
               <Slider
                 defaultValue={30}
+                aria-labelledby="discrete-slider"
+                valueLabelDisplay="auto"
                 step={10}
                 marks
                 min={0}
@@ -94,7 +97,9 @@ class Dashboard extends React.Component {
               </Typography>
             </CardContent>
             <CardActions>
-              <CardSelect handleCardActionChange={this.handleCardActionChange} />
+              <CardSelect
+                handleCardActionChange={this.handleCardActionChange}
+              />
             </CardActions>
           </Card>
         </div>
