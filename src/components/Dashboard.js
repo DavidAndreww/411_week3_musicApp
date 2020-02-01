@@ -15,7 +15,8 @@ import Typography from "@material-ui/core/Typography";
 class Dashboard extends React.Component {
   state = {
     notifications: [],
-    isOnline: true
+    isOnline: true,
+    volume: 0
   };
   // handles updated notifications for each card action
   handleCardActionChange = message => {
@@ -34,13 +35,16 @@ class Dashboard extends React.Component {
   };
   //handles change for slider component
   handleSliderChange = value => {
-    let volume = value.target.textContent;
+    this.setState((prevState) => {
+      let volume = value.target.textContent;
+      volume > 80 && prevState >80 ? console.log()
+    })
     console.log(value);
-    if (volume > 80) {
-      this.handleCardActionChange(
-        "Listening to music at high volume could cause long-term hearing loss."
-      );
-    }
+    // if (volume > 80) {
+    //   this.handleCardActionChange(
+    //     "Listening to music at high volume could cause long-term hearing loss."
+    //   );
+    // }
   };
 
   render() {
@@ -83,6 +87,7 @@ class Dashboard extends React.Component {
                 min={0}
                 max={100}
                 onChange={this.handleSliderChange}
+                // value={this.state.volume}
               />
             </CardActions>
           </Card>
