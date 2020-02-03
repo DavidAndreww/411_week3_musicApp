@@ -2,11 +2,11 @@ import React from "react";
 import Notifications from "./Notifications";
 
 //custom component imports
+import CardSwitch from './CardSwitch';
+import CardSlider from './CardSlider'
 import CardSelect from "./CardSelect";
 
 //material UI Imports
-import Switch from "@material-ui/core/Switch";
-import Slider from "@material-ui/core/Slider";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
@@ -15,7 +15,6 @@ import Typography from "@material-ui/core/Typography";
 class Dashboard extends React.Component {
   state = {
     notifications: [],
-    isOnline: true,
     volume: 0
   };
   // handles updated notifications for each card action
@@ -25,19 +24,10 @@ class Dashboard extends React.Component {
       notifications: [...notifications, message]
     });
   };
-  // handles changes for switch component
-  handleOnlineChange = () => {
-    let isOnline = !this.state.isOnline;
-    this.setState({ isOnline });
-    if (isOnline === false) {
-      this.handleCardActionChange("Your application is offline.");
-    }
-  };
   //handles change for slider component
   handleSliderChange = value => {
     let volume = value.target.textContent;
     this.setState({volume})
-    console.log(value);
     if (volume > 80) {
       this.handleCardActionChange(
         "Listening to music at high volume could cause long-term hearing loss."
@@ -59,10 +49,8 @@ class Dashboard extends React.Component {
               </Typography>
             </CardContent>
             <CardActions>
-              <Switch
-                color="primary"
-                checked={this.state.isOnline}
-                onChange={this.handleOnlineChange}
+              <CardSwitch
+                handleCardActionChange={this.handleCardActionChange}
               />
             </CardActions>
           </Card>
@@ -76,15 +64,8 @@ class Dashboard extends React.Component {
               </Typography>
             </CardContent>
             <CardActions>
-              <Slider
-                defaultValue={30}
-                aria-labelledby="discrete-slider"
-                valueLabelDisplay="auto"
-                step={10}
-                marks
-                min={0}
-                max={100}
-                onChange={this.handleSliderChange}
+              <CardSlider
+                handleCardActionChange={this.handleCardActionChange}
               />
             </CardActions>
           </Card>
