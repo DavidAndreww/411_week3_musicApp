@@ -6,11 +6,13 @@ import InputLabel from "@material-ui/core/InputLabel";
 
 class CardSelect extends React.Component {
   state = {
-    value: ''
-  }
-   handleSelectChange = e => {
+    value: ""
+  };
+
+  // if select value is set to low, runs handleCardActionChange to display message in Dashboard
+  handleSelectChange = e => {
     let quality = e.target.value;
-    this.setState({ value: quality })
+    this.setState({ value: quality });
     if (quality === "low") {
       this.props.handleCardActionChange("Sound quality has been degraded.");
     }
@@ -20,7 +22,11 @@ class CardSelect extends React.Component {
     return (
       <FormControl className="select">
         <InputLabel>Sound Quality</InputLabel>
-        <Select value={this.state.value} id="soundQuality" onChange={this.handleSelectChange}>
+        <Select
+          value={this.state.value}
+          id="soundQuality"
+          onChange={this.handleSelectChange}
+        >
           <MenuItem value="low">Low</MenuItem>
           <MenuItem value="normal">Normal</MenuItem>
           <MenuItem value="high">High</MenuItem>
@@ -28,7 +34,6 @@ class CardSelect extends React.Component {
       </FormControl>
     );
   }
-  
-};
+}
 
 export default CardSelect;

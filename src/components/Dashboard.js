@@ -1,8 +1,8 @@
 import React from "react";
 
 //custom component imports
-import CardSwitch from './CardSwitch';
-import CardSlider from './CardSlider'
+import CardSwitch from "./CardSwitch";
+import CardSlider from "./CardSlider";
 import CardSelect from "./CardSelect";
 import Notifications from "./Notifications";
 
@@ -14,7 +14,7 @@ import Typography from "@material-ui/core/Typography";
 
 class Dashboard extends React.Component {
   state = {
-    notifications: [],
+    notifications: []
   };
 
   // handles updated notifications for each card action
@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard">
         <div className="card-container">
+          {/* Online Card */}
           <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
@@ -44,6 +45,7 @@ class Dashboard extends React.Component {
               />
             </CardActions>
           </Card>
+          {/* Master Volume Card */}
           <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
@@ -59,6 +61,7 @@ class Dashboard extends React.Component {
               />
             </CardActions>
           </Card>
+          {/* Sound Quality Card */}
           <Card className="card">
             <CardContent>
               <Typography variant="h4" color="textPrimary">
