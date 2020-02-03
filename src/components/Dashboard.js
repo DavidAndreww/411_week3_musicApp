@@ -1,10 +1,10 @@
 import React from "react";
-import Notifications from "./Notifications";
 
 //custom component imports
 import CardSwitch from './CardSwitch';
 import CardSlider from './CardSlider'
 import CardSelect from "./CardSelect";
+import Notifications from "./Notifications";
 
 //material UI Imports
 import CardActions from "@material-ui/core/CardActions";
@@ -15,7 +15,6 @@ import Typography from "@material-ui/core/Typography";
 class Dashboard extends React.Component {
   state = {
     notifications: [],
-    volume: 0
   };
   // handles updated notifications for each card action
   handleCardActionChange = message => {
@@ -76,7 +75,7 @@ class Dashboard extends React.Component {
             </CardActions>
           </Card>
         </div>
-        <Notifications alerts={this.state.notifications} />
+        <Notifications notifications={this.state.notifications} />
       </div>
     );
   }
