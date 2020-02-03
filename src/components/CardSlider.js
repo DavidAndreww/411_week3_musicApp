@@ -3,7 +3,7 @@ import Slider from "@material-ui/core/Slider";
 
 class CardSlider extends React.Component {
   state = {
-    volume: 50
+    volume: 0
   };
 
   handleSliderChange = value => {
@@ -27,7 +27,8 @@ class CardSlider extends React.Component {
         min={0}
         max={100}
         onChange={this.handleSliderChange}
-        value={this.state.volume}
+        //I'm not sure if this "single source of truth is correct..."
+        value={this.valueLabelDisplay}
       />
     );
   }

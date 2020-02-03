@@ -24,16 +24,6 @@ class Dashboard extends React.Component {
       notifications: [...notifications, message]
     });
   };
-  //handles change for slider component
-  handleSliderChange = value => {
-    let volume = value.target.textContent;
-    this.setState({volume})
-    if (volume > 80) {
-      this.handleCardActionChange(
-        "Listening to music at high volume could cause long-term hearing loss."
-      );
-    }
-  };
 
   render() {
     return (
