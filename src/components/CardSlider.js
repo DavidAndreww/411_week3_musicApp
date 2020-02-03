@@ -5,10 +5,10 @@ class CardSlider extends React.Component {
   state = {
     volume: 0
   };
-
+  // if slider value is greater than 80, sends notification to be displayed
   handleSliderChange = value => {
     let volume = value.target.textContent;
-    this.setState({ volume });
+    //I couldn't figure out how to use prevState to only run handleCardActionChange the first time volume goes over 80, instead of alerting at every single onChange event
     if (volume > 80) {
       this.props.handleCardActionChange(
         "Listening to music at high volume could cause long-term hearing loss"
@@ -27,7 +27,7 @@ class CardSlider extends React.Component {
         min={0}
         max={100}
         onChange={this.handleSliderChange}
-        //I'm not sure if this "single source of truth is correct..."
+        //I'm not sure if this "single source of truth is accurate..."
         value={this.valueLabelDisplay}
       />
     );

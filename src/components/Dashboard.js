@@ -16,11 +16,12 @@ class Dashboard extends React.Component {
   state = {
     notifications: [],
   };
+
   // handles updated notifications for each card action
   handleCardActionChange = message => {
     let notifications = this.state.notifications;
     this.setState({
-      notifications: [...notifications, message]
+      notifications: [message, ...notifications]
     });
   };
 
